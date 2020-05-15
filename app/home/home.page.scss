@@ -1,0 +1,98 @@
+#container {
+  text-align: center;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+#custom-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  width:100%;
+  background-color: #ffbb99;
+}
+
+.flb {
+  background-color: #ff884d;
+  height:100%;
+  width:100%;
+  animation: pulse 1s linear forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Aligner-item {
+  max-width: 50%;
+}
+.Aligner-item--top {
+  align-self: flex-start;
+}
+.Aligner-item--bottom {
+  align-self: flex-end;
+}
+#custom-overlay img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  animation: animation 3100ms linear infinite both;
+  animation-delay: 1s;
+}
+@keyframes pulse {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+.card1{
+  background-image: url("../../assets/quoteBackground.png");
+  min-height: 30%;
+}
+.card23{
+  background-color: #f47d49;
+
+  min-height: 30%;
+
+}
+.anim {
+  -webkit-animation: cloud-move 3s ease-in-out infinite both;
+  animation: cloud-move 3s ease-in-out infinite both;
+}
+
+@-webkit-keyframes cloud-move {
+  50% { transform: translateY(15px);}
+  100% { transform: translateY(0px); }
+}
+
+@keyframes cloud-move {
+  50% { transform: translateY(15px);}
+  100% { transform: translateY(0px); }
+}
+

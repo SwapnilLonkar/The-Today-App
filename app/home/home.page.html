@@ -1,0 +1,77 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/logoo.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title  color="black">
+      <div style="color:black;">All about Today</div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  color="secondary">
+
+
+  <div id="container">
+    <ion-card class="card1">
+      <ion-card-title>Today's Quote</ion-card-title>
+
+      <ion-card-content>
+        <ion-text color="dark">
+          <b>
+        {{quoteList['content']}}<br>
+          </b>
+
+        </ion-text>
+        <ion-text color="dark">
+          <i>
+          <br>-{{quoteList['author']}}
+          </i>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="card23">
+      <ion-card-title>
+        Today's Weather
+      </ion-card-title>
+      <ion-card-content>
+        <div class="anim">
+
+        <ion-text style="font-size: xx-large;mso-bidi-font-weight: bolder;color: black">{{postList['temp']}}&deg;</ion-text> <br>
+         <i> <img src= 'http://openweathermap.org/img/wn/02d@2x.png'> </i>
+        </div>
+        <ion-text color="dark" >
+          <b>Feels like:</b>{{postList['feels_like']}}
+        </ion-text>
+
+
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="card23">
+      <ion-card-title>
+        Today's News
+      </ion-card-title>
+      <ion-card-content>
+
+
+        <ion-list style="background-color: #f47d49" >
+          <ion-item color="tertiary" *ngFor="let article of articleList">
+            <ion-text>
+              <a style="color: black"  href="{{article.url}}" target="_blank">
+          {{article.title}}
+              </a>
+            </ion-text>
+          </ion-item>
+        </ion-list>
+
+      </ion-card-content>
+    </ion-card>
+
+
+  </div>
+</ion-content>
